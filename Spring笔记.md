@@ -1,5 +1,5 @@
-##Spring笔记
-####Spring依赖注入的方式
+## Spring笔记
+#### Spring依赖注入的方式
 * 基于XML的方式，setter注入，允许集合注入\<set>、\<list>、\<map>、\<array>，可以循环依赖（不建议）
 
 ```
@@ -19,7 +19,7 @@
 * @Bean标签的公共方法都对应一个Bean的定义，该Bean交给容器管理
 * @Configuration标签该类是一个Bean并且包含配置元数据
 
-####配置和使用容器
+#### 配置和使用容器
 * AnnotationConfigApplicationContext基于Java配置元数据初始化容器（创建时可以传入多个入参）
 * ClassPathXmlApplicationContext基于xml配置元数据初始化容器
 * 容器默认的实例化Bean为单例
@@ -62,7 +62,7 @@
 * 生命周期的回调，<bean>元素有init-method和destroy-method特性，Prototype作用域Bean实例化之后不被跟踪，因此它们的destroy方法不能被调用；@PostConstruct和@PreDestroy标签放置在方法之上，但是需要添加\<context:annotation-config/>激活对该标签的处理；实现InitializingBean和DisposableBean接口
 * @Import注解导入相应的配置类，@ImportResource注解导入相应的XML bean配置文件
 
-####SpringMVC
+#### SpringMVC
 * 前端控制器：Dispatcher Servlet，处理器映射：HandlerMapping，视图解析器：ViewResolver
 * 实现ServletContextAware接口，可以访问Servlet上下文
 * @Controller标签，Dispatcher Servlet扫描被@Controller注解的类，从而将Web请求映射到被@RequestMapping注解的方法上
@@ -70,7 +70,7 @@
 * @ModeAttribute标签，使用一个向视图公开的健将一个返回值与一个参数绑定起来，可以在方法级别或方法的参数上应用该注解
 * @PathVariable注解，将一个方法参数绑定到一个URL模板
 
-####Spring数据库相关
+#### Spring数据库相关
 * 不要在生产环境使用DriverManagerDataSource，因为没有连接池功能
 * 在应用程序启动期间，使用一些SQL脚本初始化数据库，enabled为true时才进行初始化
 
@@ -81,12 +81,12 @@
 </jdbc:initialize-database>
 ```
 
-####SpringJPA
+#### SpringJPA
 * @GeneratedValue注解的strategy属性指定实体类的ID生成策略；如果没有指定，Oracle使用SEQUENCE，MySQL使用IDENTITY
 * @Transient注解、transient修饰符标记某一属性不持久化
 * 在配置类顶部放置@EnableTransactionManagement注解，从而启用Spring容器管理事务
 
-####Spring管理事务
+#### Spring管理事务
 * ACID（原子性、一致性、隔离性、持久性）
 * 本地事务：应用程序使用单一数据库；全局事务：分布式事务管理，涉及多个数据库
 * Spring的事务抽象模型基于PlatformTransactionManager接口
@@ -115,7 +115,7 @@ TransactionAspectSupport.currentTransactionStatus().setRollbackOnly();
 * 使用编程方式控制事务的机制，TranasactionTemplate（Spring推荐）、PlatformTransactionManager API
 * 通知事务性操作，实现MethodInterceptor接口，TransactionSynchronization接口
 
-####Spring面向切面
+#### Spring面向切面
 * 接合点（Join-point）、通知（Advice）、切入点（Point-cut）、目标（Target）、编织（Weaving-编译时、加载时、运行时）；Spring AOP通过Proxy模型![Proxy](./images/Proxy.png)
 * ![AOP](./images/AOP.png)
 * 
