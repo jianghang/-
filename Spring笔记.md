@@ -25,6 +25,8 @@
 * 容器默认的实例化Bean为单例
 * \<context:component-scan/>作用是扫描包路径中的类
 * 重写Bean定义，两个同样的@Configuration类
+* classpath:扫描当前class路径下的配置文件，只能加载找到的第一个文件
+* classpath*:从多个jar文件中加载相同的文件
 * depends-on，类之间的依赖，@DependsOn在类级别使用时，只有注解内依赖的Bean被创建之后才会创建本类；在方法级别使用时，则只对基于Java的配置产生影响
 
 ```
