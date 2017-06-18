@@ -1,3 +1,5 @@
 #### Git常用命令
 * 连接远程仓库--git remote add origin https://github.com/jianghang/notes.git
 * fatal: refusing to merge unrelated histories本地仓库连接远程仓库报的错误，原因为是两个为不同的项目，解决方法：git pull origin master --allow-unrelated-histories
+* git update-index --assume-unchanged your_file_path不想继续追踪某个文件
+* git update-index --no-assume-unchanged your_file_path再次继续跟踪某个文件
