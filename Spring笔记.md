@@ -71,6 +71,8 @@
 * @RequestMapping标签，用来将用户的请求映射到处理类或方法
 * @ModeAttribute标签，使用一个向视图公开的健将一个返回值与一个参数绑定起来，可以在方法级别或方法的参数上应用该注解
 * @PathVariable注解，将一个方法参数绑定到一个URL模板
+* \<url-pattern>/\</url-pattern> 会匹配到/login这样的路径型url，不会匹配到模式为*.jsp这样的后缀型url
+* \<url-pattern>/\*\</url-pattern> 会匹配所有url;路径型的和后缀型的url(包括/login,\*.jsp,\*.js和\*.html等)
 
 #### Spring数据库相关
 * 不要在生产环境使用DriverManagerDataSource，因为没有连接池功能
