@@ -59,3 +59,18 @@
 
 </build>
 ```
+  3.本工程修改仓库地址pom.xml添加
+  
+```
+<repositories>
+    <repository>
+        <id>central</id>
+        <name>Central Repository</name>
+        <url>http://maven.aliyun.com/nexus/content/repositories/central</url>
+        <layout>default</layout>
+        <snapshots>
+            <enabled>false</enabled>
+        </snapshots>
+    </repository>
+</repositories>
+```
