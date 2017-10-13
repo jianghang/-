@@ -5,3 +5,5 @@
 * git update-index --no-assume-unchanged your_file_path再次继续跟踪某个文件 
 * git config credential.helper 'cache --timeout=3600' 记住用户名密码，时间为一个小时
 * git config --global credential.helper store 长期存储密码
+* git config --global http.proxy 配合下一条命令解决push不了的问题
+* git config --global --unset http.proxy 
