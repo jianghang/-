@@ -7,3 +7,5 @@
 * git config --global credential.helper store 长期存储密码
 * git config --global http.proxy 配合下一条命令解决push不了的问题
 * git config --global --unset http.proxy 
+* git config user.name 'xxxx' 在项目内运行设置本项目的用户名
+* git config user.email 'xxxx@qq.com' 在项目内设置本项目的邮箱
